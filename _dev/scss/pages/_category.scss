@@ -1,0 +1,119 @@
+#listing, .featured-products {
+  > h2 {
+    @include heading-title;
+    @include heading-spacing;
+    color: $listing-title-color;
+  }
+  .item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 33.33333%;
+    /*height: 426px;*/
+    > .thumb > a {
+      &:before {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        opacity: 0;
+        border: 0 solid rgba(255, 255, 255, .1);
+      }
+      .header {
+        position: absolute;
+        z-index: 2;
+        /*top: 75px;*/
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        > div {
+          position: relative;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0 20px;
+          text-align: center;
+          h3 {
+            color: $listing-title-color;
+            font-size: $smaller-font-size;
+            line-height: 1.5;
+            font-weight: 400;
+          }
+          .price {
+            color: $listing-price-color;
+          }
+        }
+      }
+      figure {
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*padding-bottom: 124%;*/
+        padding-bottom: 100%;
+        margin: 0;
+        .bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: cover;
+        }
+      }
+    }
+    .buy {
+      position: absolute;
+      z-index: 10;
+      right: 0;
+      bottom: 0;
+      a {
+        background-color: rgba(255, 255, 255, .2);
+        display: inline-block;
+        padding: 10px 15px;
+        color: $listing-link-color;
+        &:hover {
+          @include blinker;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #listing, .featured-products {
+    .item {
+      width: 50%;
+      /*height: 562px;*/
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #listing, .featured-products {
+    .item {
+      float: none;
+      width: 100%;
+      > .thumb > a {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        .header {
+          top: 30px;
+        }
+        figure {
+          padding-bottom: 85%;
+          .bg {
+            background-position: 50% 70%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+#about {
+  #location {
+    .body {
+      p, dl > * {
+        font-size: 14px;
+        line-height: 1.6;
+        color: initial;
+      }
+      dt {
+        font-weight: 400;
+      }
+      a {
+        color: $primary-link-color;
+      }
+      .box + .box {
+        margin-top: 23px;
+      }
+    }
+    img {
+      &:nth-child(1) {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}

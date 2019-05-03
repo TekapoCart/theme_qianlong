@@ -1,0 +1,34 @@
+#side-nav {
+  position: fixed;
+  z-index: $primary-z-index;
+  top: 50%;
+  left: 30px;
+
+  ul {
+    display: table;
+    transform: rotate(90deg) translate(-50%, -100%);
+    transform-origin: 0 0;
+    height: 16px;
+    li {
+      display: table-cell;
+      white-space: nowrap;
+      a {
+        line-height: $bigger-line-height;
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+        padding: 20px 0 0 0;
+        margin: 0 10px;
+        &:hover, &.current, &:active, &:focus {
+          border-bottom-color: $primary-link-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #side-nav {
+    left: 3px;
+  }
+}

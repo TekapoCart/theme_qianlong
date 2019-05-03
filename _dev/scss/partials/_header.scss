@@ -1,0 +1,201 @@
+#header {
+  position: absolute;
+  z-index: $primary-z-index;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  @include main-spacing;
+  background-color: $primary-background;
+  > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    h1 {
+      width: $side-width;
+      height: 75px;
+      margin: 0;
+      line-height: 1;
+      a {
+        position: fixed;
+        display: inline-block;
+        width: 150px;
+        height: 75px;
+        font-size: 15px;
+        line-height: $bigger-line-height;
+        @include logo;
+        &:hover {
+          @include blinker;
+        }
+      }
+    }
+    .top {
+      margin-top: 3px;
+      @include main-left-width($side-width);
+      .headerbar {
+        opacity: 0.5;
+        display: flex;
+        .note {
+          width: 25%;
+          padding-right: 22px;
+          font-size: $smaller-font-size;
+          line-height: $bigger-line-height;
+          &:last-child {
+            width: 50%;
+            padding-right: 0;
+          }
+          a {
+            &:hover {
+              @include blinker;
+            }
+          }
+        }
+      }
+      .main-menu  {
+        margin-top: 19px;
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          li {
+            width: 25%;
+            &.current, &.on {
+              a {
+                &:before {
+                  position: absolute;
+                  top: 3px;
+                  left: -22px;
+                  content: $nav-symbol;
+                }
+              }
+            }
+            a {
+              font-size: 18px;
+              line-height: 1;
+              position: relative;
+              display: inline;
+              padding-top: 0;
+              padding-bottom: 0;
+              color: $primary-link-color;
+              &:hover {
+                &:before {
+                  position: absolute;
+                  top: 3px;
+                  left: -22px;
+                  content: $nav-symbol;
+                  animation: shift-nav 0.9s linear infinite;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .icons {
+      position: absolute;
+      top: -25px;
+      right: -15px;
+      opacity: $icon-opacity;
+      zoom: 0.85;
+      button, a {
+        &:hover {
+          @include blinker;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #header {
+    position: fixed;
+    height: 58px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $mobile-seperator-color;
+    background-color: $primary-background;
+    > div {
+      padding: 0 20px;
+      h1 {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        a {
+          position: static;
+          width: 224px;
+          height: 35px;
+          margin: 0 auto;
+        }
+      }
+      .icons {
+        top: -18px;
+        right: 0;
+        opacity: 1;
+        zoom: 0.95;
+      }
+    }
+
+    #menu-icon {
+      position: absolute;
+      top: -12px;
+      left: -20px;
+      padding: 10px;
+      z-index: $bigger-z-index;
+
+      .material-icons {
+        line-height: initial;
+        border: none;
+        padding: 0;
+      }
+    }
+
+
+
+  }
+}
+
+@media (min-width: 768px) {
+  #checkout #header > div h1 a {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  #header .header-nav .blockcart {
+    margin-right: 0;
+    background: transparent;
+  }
+  #header.is-open {
+    background-color: $primary-background;
+  }
+}
+
+#index {
+  #header {
+    background-color: transparent;
+    border: none;
+    h1 {
+      display: none;
+    }
+    #menu-icon, .icons {
+      .material-icons, .cart-products-count {
+        color: $index-link-color;
+      }
+    }
+    #_desktop_top_menu {
+      display: none;
+    }
+  }
+}
+
+#index {
+  #_desktop_top_menu .top-menu a:hover[data-depth="0"] {
+    color: $index-link-color;
+  }
+}

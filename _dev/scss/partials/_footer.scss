@@ -1,0 +1,17 @@
+#footer {
+  position: relative;
+  padding-top: 264px;
+  padding-bottom: $main-spacing;
+  @include main-spacing;
+}
+
+@media (max-width: 767px) {
+  #footer {
+    padding-top: 125px;
+    padding-bottom: 15px;
+
+    .socialfollow {
+      right: $main-spacing-mobile;
+    }
+  }
+}

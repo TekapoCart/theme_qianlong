@@ -1,0 +1,42 @@
+.footerbar {
+  h3 {
+    font-weight: 400;
+    font-size: $smaller-font-size;
+    line-height: initial;
+    display: inline-block;
+  }
+  a {
+    opacity: 0.5;
+    margin-left: 30px;
+    .date {
+      margin-right: 10px;
+    }
+    &:hover {
+      @include blinker;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footerbar {
+    h3 {
+      display: block;
+    }
+    a {
+      margin-left: 0;
+      margin-right: 20px;
+      display: inline-block;
+    }
+  }
+}
+
+#index {
+  .footerbar {
+    h3 {
+      color: #fff;
+    }
+    a {
+      color: $index-link-color;
+    }
+  }
+}

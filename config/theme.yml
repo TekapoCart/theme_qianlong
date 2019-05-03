@@ -1,0 +1,78 @@
+parent: simplicity
+name: simplicity_miyabi
+display_name: simplicity qianlong
+version: 1.0.0
+assets:
+  use_parent_assets: true
+  js:
+    all:
+      - id: jquery-bxslider
+        path: js/jquery/plugins/bxslider/jquery.bxslider.js
+        priority: 500
+        position: bottom
+    index:
+      - id: js-index
+        path: assets/js/index.js
+        priority: 501
+        position: bottom
+    cms:
+      - id: cms-index
+        path: assets/js/cms.js
+        priority: 501
+        position: bottom
+  css:
+    all:
+      - id: css-bxslider
+        path: js/jquery/plugins/bxslider/jquery.bxslider.css
+        priority: 500
+        media: all
+
+global_settings:
+  hooks:
+    modules_to_hook:
+      displayBanner:
+        - simplicity_headerbar
+      displayNav1:
+        - simplicity_logo
+      displayNav2:
+        - ps_languageselector
+        - ps_currencyselector
+        - ps_customersignin
+        - ps_shoppingcart
+      displayTop:
+        - ps_mainmenu
+      displayHome:
+        - ps_mainmenu
+        - ps_customtext
+      displayFooterBefore:
+        - ps_socialfollow
+      displayFooter:
+      displayFooterAfter:
+        - simplicity_footerbar
+      displayLeftColumn:
+      displayLeftColumnProduct:
+      displaySearch:
+      displayProductAdditionalInfo:
+        - ps_sharebuttons
+      displayFooterProduct:
+        - ps_categoryproducts
+
+  image_types:
+    small_default:
+      width: 300
+      height: 300
+      scope: [products]
+    home_default:
+      width: 500
+      height: 500
+      scope: [products]
+    large_default:
+      width: 800
+      height: 800
+      scope: [products]
+
+theme_settings:
+  default_layout: layout-left-column
+  layouts:
+    index: layout-content-only
+    cms: layout-full-width

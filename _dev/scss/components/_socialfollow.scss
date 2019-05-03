@@ -1,0 +1,34 @@
+.socialfollow {
+  li {
+    font-size: 14px;
+    margin-left: 2px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $social-icon-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    &:hover {
+      @include blinker;
+    }
+    a {
+      text-indent: 100%;
+      overflow: hidden;
+      display: block;
+    }
+  }
+}
+
+#footer {
+  .socialfollow {
+    text-align: right;
+    opacity: $icon-opacity;
+  }
+}
+
+#mobile_top_menu_msc_wrapper {
+  .socialfollow {
+    padding-left: 10px;
+  }
+}

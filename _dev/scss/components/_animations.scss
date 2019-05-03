@@ -1,0 +1,36 @@
+@keyframes blink {
+  0% {
+    opacity: 0.2
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes shift-nav {
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes shift-slider {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(-75px);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

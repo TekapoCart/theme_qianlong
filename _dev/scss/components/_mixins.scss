@@ -1,0 +1,52 @@
+@mixin heading-title {
+  font-size: 28px;
+  line-height: $bigger-line-height;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@mixin heading-spacing {
+  margin-top: 24px;
+  margin-bottom: 45px;
+}
+
+@mixin line-letter {
+  line-height: $article-line-height;
+  letter-spacing: $article-letter-spacing;
+}
+
+@mixin logo {
+  font-weight: 400;
+  font-family: $secondary-font-family;
+}
+
+@mixin blinker {
+  animation: blink 1s 1 cubic-bezier(.165, .84, .44, 1);
+}
+
+
+@mixin main-spacing() {
+  padding-left: $main-spacing;
+  padding-right: $main-spacing;
+  @media (max-width: 767px) {
+    padding-left: $main-spacing-mobile;
+    padding-right: $main-spacing-mobile;
+  }
+}
+
+@mixin main-left-width($side-width) {
+  width: calc(100% - #{$side-width});
+}
+
+@mixin main-spacing-left-column($side-width) {
+  @include main-left-width($side-width);
+  max-width: 1338px;
+  margin-left: $side-width;
+  margin-right: auto;
+  margin-top: 48px;
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

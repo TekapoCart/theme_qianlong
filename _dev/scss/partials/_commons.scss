@@ -1,0 +1,250 @@
+html {
+  scroll-behavior: smooth;
+  /*box-sizing: border-box;*/
+}
+
+body {
+  font-size: $primary-font-size;
+  line-height: $primary-line-height;
+  letter-spacing: $primary-letter-spacing;
+  color: $primary-color;
+  background-color: $primary-background;
+  font-family: $primary-font-family;
+  animation: fadein 2s;
+}
+
+p, pre {
+  color: initial;
+  font-size: $primary-font-size;
+  line-height: $bigger-line-height;
+}
+
+main {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  main {
+    min-width: 0;
+  }
+}
+
+#main-content-wrapper {
+  height: auto;
+  position: relative;
+  padding-top: $header-height;
+}
+
+@media (max-width: 767px) {
+  #main-content-wrapper {
+    padding-top: $header-height-mobile;
+  }
+}
+
+#main-content {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include main-spacing;
+  @include main-spacing-left-column($side-width);
+  .section {
+    .header {
+      @include heading-spacing;
+      h3 {
+        @include heading-title;
+      }
+    }
+    .body {
+      .item {
+        position: relative;
+        margin-right: -22px;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    & + .section {
+      margin-top: 105px;
+    }
+  }
+}
+
+#category,
+#viewed-products {
+  #main-content-wrapper {
+    background-color: $listing-background;
+  }
+  #main-content {
+    margin-top: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #category,
+  #viewed-products {
+    #main-content {
+      padding-left: 0;
+    }
+  }
+}
+
+#product {
+  #main-content-wrapper {
+    background-color: $listing-background;
+  }
+  #main-content {
+    margin-top: 0;
+
+  }
+  #content {
+    max-width: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  #product {
+    #main-content {
+      padding: 0;
+    }
+  }
+}
+
+#checkout #main-content-wrapper {
+  @include main-spacing;
+}
+
+/* parent theme hack */
+
+/* member area */
+.page-header {
+  @include heading-spacing;
+  h1 {
+    @include heading-title;
+  }
+}
+
+.page-footer {
+  margin-top: 25px;
+  a {
+    &:hover {
+      @include blinker;
+    }
+  }
+  p {
+    margin-top: 5px;
+  }
+}
+
+#cms #main-content-wrapper p {
+  line-height: $article-line-height;
+  letter-spacing: $article-letter-spacing;
+  margin-bottom: 0;
+  margin-top: 45px;
+}
+
+.page-my-account #content .links a {
+  font-weight: 400;
+  color: initial;
+}
+
+#product {
+  #main-content {
+    h1 {
+      @include heading-title;
+      @include heading-spacing;
+      color: $listing-title-color;
+      padding-top: 48px;
+    }
+    .current-price, .control-label, .social-sharing, #product-availability, .nav-link {
+      color: $listing-price-color;
+    }
+    .nav-link.active,
+    .product-images > li.thumb-container > .thumb.selected,
+    .product-images>li.thumb-container>.thumb:hover {
+      border-color: $listing-price-color;
+    }
+    div[id*=product-description-short], .product-description {
+      color: $listing-title-color;
+      font-size: $primary-font-size;
+      @include line-letter;
+    }
+    .product-cover .layer {
+      background: $overlay-background;
+    }
+    .tabs, .featured-products {
+
+    }
+    .featured-products .products {
+      margin: 0;
+    }
+
+  }
+
+}
+
+@media (max-width: 767px) {
+  #product {
+    #main-content {
+      h1,
+      div[id*=product-description-short],
+      .current-price, .control-label, .social-sharing, #product-availability,
+      .product-quantity, .tabs,
+      .featured-products h2 {
+        padding-left: $main-spacing-mobile;
+        padding-right: $main-spacing-mobile;
+      }
+    }
+  }
+}
+
+.table thead th {
+  border-bottom: 1px solid $primary-seperator-color;
+}
+
+.table td, .table th {
+  border-top: 1px solid $primary-seperator-color;
+}
+
+.table-bordered,
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid transparent;
+}
+
+.thead-default th {
+  background-color: transparent;
+}
+
+.separator {
+  border-color: $primary-seperator-color;
+}
+
+.copyright {
+  font-size: $smaller-font-size;
+}
+
+.tabs .nav-tabs {
+  border-bottom: 1px solid #c4c1bb;
+}
+
+.page-order-detail .order-items .order-item {
+  border-bottom: 1px solid #c4c1bb;
+}
+
+.text-muted {
+  font-size: $primary-font-size;
+}
+
+#header a.logo {
+  width: min-content;
+}
+@media (max-width: 767px) {
+  #header a.logo {
+    width: auto;
+  }
+  #header img.logo {
+    max-height: $header-logo-max-height;
+  }
+}
