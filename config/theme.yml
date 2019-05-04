@@ -1,6 +1,6 @@
 parent: simplicity
-name: simplicity_miyabi
-display_name: simplicity qianlong
+name: theme_qianlong
+display_name: theme qianlong
 version: 1.0.0
 assets:
   use_parent_assets: true
