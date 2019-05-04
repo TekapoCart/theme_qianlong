@@ -70,6 +70,18 @@ global_settings:
       width: 800
       height: 800
       scope: [products]
+    cart_default:
+      width: 300
+      height: 300
+      scope: []
+    medium_default:
+      width: 500
+      height: 500
+      scope: []
+    category_default:
+      width: 500
+      height: 500
+      scope: []
 
 theme_settings:
   default_layout: layout-left-column
