@@ -45,8 +45,9 @@ global_settings:
         - ps_mainmenu
         - ps_customtext
       displayFooterBefore:
-        - ps_socialfollow
       displayFooter:
+        - ps_linklist
+        - ps_socialfollow
       displayFooterAfter:
         - simplicity_footerbar
       displayLeftColumn:

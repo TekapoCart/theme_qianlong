@@ -22,8 +22,9 @@
 
 #footer {
   .socialfollow {
-    text-align: right;
+    text-align: left;
     opacity: $icon-opacity;
+    clear: both;
   }
 }
 
