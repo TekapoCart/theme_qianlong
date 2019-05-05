@@ -35,7 +35,7 @@ function startSlider () {
     slider = startSlider();
 
     $(window).resize(function(){
-        if (typeof slider !== 'undefined') {
+        if (typeof slider !== 'undefined' && typeof slider.destroySlider === "function") {
             slider.destroySlider();
             slider = startSlider();
         }

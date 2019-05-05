@@ -25,6 +25,12 @@
       }
     }
   }
+
+  .material-icons {
+    .add, .remove {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 767px) {
