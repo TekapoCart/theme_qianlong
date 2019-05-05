@@ -31,7 +31,6 @@ global_settings:
   hooks:
     modules_to_hook:
       displayBanner:
-        - simplicity_headerbar
       displayNav1:
         - simplicity_logo
       displayNav2:
@@ -40,6 +39,7 @@ global_settings:
         - ps_customersignin
         - ps_shoppingcart
       displayTop:
+        - simplicity_headerbar
         - ps_mainmenu
       displayHome:
         - ps_mainmenu
