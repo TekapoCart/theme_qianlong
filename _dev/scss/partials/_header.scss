@@ -187,7 +187,11 @@
       .material-icons, .cart-products-count {
         color: $index-link-color;
       }
+      .user-info a .icon-fill {
+        fill: $index-link-color
+      }
     }
+
     #_desktop_top_menu {
       display: none;
     }

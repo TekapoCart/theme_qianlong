@@ -28,6 +28,8 @@ assets:
         media: all
 
 global_settings:
+  configuration:
+    PS_IMAGE_GENERATION_METHOD: 1
   hooks:
     modules_to_hook:
       displayBanner:
@@ -45,9 +47,9 @@ global_settings:
         - ps_mainmenu
         - ps_customtext
       displayFooterBefore:
+        - ps_socialfollow
       displayFooter:
         - ps_linklist
-        - ps_socialfollow
       displayFooterAfter:
         - simplicity_footerbar
       displayLeftColumn:

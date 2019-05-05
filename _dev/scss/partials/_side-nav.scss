@@ -27,7 +27,7 @@
   }
 
   .material-icons {
-    .add, .remove {
+    &.add, &.remove {
       display: none;
     }
   }

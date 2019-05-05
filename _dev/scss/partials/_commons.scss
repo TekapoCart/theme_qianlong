@@ -248,3 +248,7 @@ main {
     max-height: $header-logo-max-height;
   }
 }
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: initial;
+}
