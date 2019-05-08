@@ -47,14 +47,21 @@ msc-sidebar:not(:defined) {
   .body {
     position: absolute;
     top: 20%;
-    left: 40px;
+    width: 100%;
     a {
       color: $primary-link-color;
     }
   }
 
   .top-menu {
+    li {
+      padding-left: 40px;
+      &:hover {
+        background: $focus-background;
+      }
+    }
     a {
+      position: relative;
       color: $primary-link-color;
     }
     .current, .on {
@@ -71,13 +78,17 @@ msc-sidebar:not(:defined) {
     }
   }
 
+  .socialfollow {
+    margin-left: 50px;
+  }
+
   .nav__section + .nav__section {
     margin-top: 25px;
     &:before {
       display: block;
       width: 10px;
       height: 1px;
-      margin-left: 10px;
+      margin-left: 50px;
       margin-bottom: 30px;
       content: '';
       background-color: rgba(0, 0, 0, .3);
@@ -88,6 +99,18 @@ msc-sidebar:not(:defined) {
     background: #dad7d0;
   }
 
+  #_mobile_user_info, #_mobile_language_selector, #_mobile_currency_selector {
+    margin-left: 40px;
+  }
+
 }
 
+mdc-select {
+  --theme-color: #565553; /* $listing-background */
+  --label: rgba(0,0,0,.6);
+  --border-color: rgba(142,142,142,.5);
+  --border-color-hover: rgba(142,142,142,1);
+  --bgcolor: rgba(245,245,245,.5);
+  --bgcolor-hover: rgba(245,245,245,1);
+}
 

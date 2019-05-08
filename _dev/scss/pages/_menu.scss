@@ -2,7 +2,6 @@
   .item {
     .type {
       font-size: 20px;
-      width: 125px;
       min-width: 125px;
       sup {
         font-size: $smaller-font-size;
@@ -82,6 +81,9 @@
 @media (max-width: 767px) {
   #menu {
     .item {
+      .type {
+        min-width: 80px;
+      }
       .pricing {
         display: none;
       }

@@ -32,7 +32,7 @@
             <div class="nav__section">
                 <div class="js-top-menu-bottom">
 
-                    {hook h='displayFooterAfter'}
+                    {hook h='displayFooterBefore'}
 
                     <div id="_mobile_user_info"></div>
                     <div id="_mobile_language_selector"></div>

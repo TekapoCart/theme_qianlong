@@ -21,14 +21,7 @@ p, pre {
 
 main {
   width: 100%;
-  min-width: 1200px;
   overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  main {
-    min-width: 0;
-  }
 }
 
 #main-content-wrapper {
@@ -49,13 +42,16 @@ main {
   box-sizing: border-box;
   @include main-spacing;
   @include main-spacing-left-column($side-width);
-  .section {
-    .header {
-      @include heading-spacing;
-      h3 {
-        @include heading-title;
-      }
+  .head {
+    @include heading-spacing;
+    h1, h2, h3 {
+      @include heading-title;
     }
+  }
+  h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: 400;
+  }
+  .section {
     .body {
       .item {
         position: relative;
@@ -137,11 +133,14 @@ main {
   }
 }
 
-#cms #main-content-wrapper p {
-  line-height: $article-line-height;
-  letter-spacing: $article-letter-spacing;
-  margin-bottom: 0;
-  margin-top: 45px;
+#cms {
+  #main-content-wrapper {
+    p, ul, ol, blockquote {
+      line-height: $article-line-height;
+      letter-spacing: $article-letter-spacing;
+    }
+
+  }
 }
 
 .page-my-account #content .links a {
@@ -162,7 +161,7 @@ main {
     }
     .nav-link.active,
     .product-images > li.thumb-container > .thumb.selected,
-    .product-images>li.thumb-container>.thumb:hover {
+    .product-images > li.thumb-container > .thumb:hover {
       border-color: $listing-price-color;
     }
     div[id*=product-description-short], .product-description {
@@ -240,6 +239,7 @@ main {
 #header a.logo {
   width: min-content;
 }
+
 @media (max-width: 767px) {
   #header a.logo {
     width: auto;
@@ -251,4 +251,20 @@ main {
 
 .dropdown-item:focus, .dropdown-item:hover {
   color: initial;
+}
+
+.quickview .social-sharing {
+  margin-left: 0;
+}
+
+.faq .q {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.faq .a:before, .faq .q:before {
+  top: -10px;
+}
+
+.faq > li {
+  border-bottom: 1px solid $mobile-seperator-color;
 }
