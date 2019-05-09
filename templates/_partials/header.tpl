@@ -32,11 +32,11 @@
             <div class="nav__section">
                 <div class="js-top-menu-bottom">
 
-                    {hook h='displayFooterBefore'}
-
                     <div id="_mobile_user_info"></div>
                     <div id="_mobile_language_selector"></div>
                     <div id="_mobile_currency_selector"></div>
+
+                    {hook h='displayFooterBefore'}
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ zip -rX theme_qianlong.zip theme_qianlong -x *_dev* -x *.git* -x *.idea* -x *.DS
 ```
 
 
-**convert scss to css** 
+**convert scss to css command** 
 ```
 cd theme_qianlong/_dev
 npm install
