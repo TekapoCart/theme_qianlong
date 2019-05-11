@@ -91,3 +91,4 @@ theme_settings:
   layouts:
     index: layout-content-only
     cms: layout-full-width
+    pagenotfound: layout-full-width
