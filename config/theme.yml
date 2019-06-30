@@ -16,7 +16,7 @@ assets:
         priority: 501
         position: bottom
     cms:
-      - id: cms-index
+      - id: js-cms
         path: assets/js/cms.js
         priority: 501
         position: bottom
@@ -30,6 +30,8 @@ assets:
 global_settings:
   configuration:
     PS_IMAGE_GENERATION_METHOD: 1
+    SIMPLICITY_IMAGE_USE_CROP: 0
+    SIMPLICITY_IMAGICK: 0
   hooks:
     modules_to_hook:
       displayBanner:
@@ -57,6 +59,7 @@ global_settings:
       displaySearch:
       displayProductAdditionalInfo:
         - ps_sharebuttons
+        - ps_viewedproduct
       displayFooterProduct:
         - ps_categoryproducts
 
