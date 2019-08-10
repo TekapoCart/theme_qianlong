@@ -32,7 +32,8 @@ global_settings:
     PS_IMAGE_GENERATION_METHOD: 1
     SIMPLICITY_IMAGE_USE_CROP: 0
     SIMPLICITY_IMAGICK: 0
-  hooks:
+    SIMPLICITY_DARK_MODE: 0
+hooks:
     modules_to_hook:
       displayBanner:
       displayNav1:
