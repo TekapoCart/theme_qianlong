@@ -66,6 +66,12 @@ main {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-content {
+    @include main-spacing-left-column($side-width-tablet);
+  }
+}
+
 #cms {
   #main-content-wrapper {
     p, ul, ol, blockquote {
@@ -86,6 +92,12 @@ main {
     h1, h2, h3, h4, h5, h6, h7 {
       font-weight: 400;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-spacing {
+    @include main-spacing-left-column($side-width-tablet);
   }
 }
 
@@ -297,4 +309,8 @@ main {
 
 .faq > li {
   border-bottom: 1px solid $mobile-seperator-color;
+}
+
+.product-line-grid-left img {
+  height: initial;
 }
