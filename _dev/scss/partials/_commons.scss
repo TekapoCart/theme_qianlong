@@ -303,7 +303,8 @@ main {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.faq .a:before, .faq .q:before {
+.faq .a:before,
+.faq .q:before {
   top: -10px;
 }
 
@@ -312,5 +313,21 @@ main {
 }
 
 .product-line-grid-left img {
+  width: 78px;
   height: initial;
+}
+
+#_desktop_top_menu,
+#_desktop_top_menu > ul > li {
+  display: block;
+}
+
+#header .header-nav .blockcart .cart-products-count,
+#header .header-top .blockcart .cart-products-count {
+  top: -9px;
+}
+
+.cart-grid-body .cart-overview {
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -159,6 +159,7 @@
       top: -12px;
       left: -20px;
       padding: 10px;
+      margin: 0;
       z-index: $bigger-z-index;
 
       .material-icons {
@@ -182,6 +183,7 @@
 @media (max-width: 767px) {
   #header .header-nav .blockcart {
     margin-right: 0;
+    margin-top: 20px;
     background: transparent;
   }
   #header.is-open {

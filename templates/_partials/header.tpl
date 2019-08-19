@@ -35,7 +35,7 @@
                     <div id="_mobile_user_info"></div>
                     <div id="_mobile_language_selector"></div>
                     <div id="_mobile_currency_selector"></div>
-
+                    <div class="clearfix"></div>
                     {hook h='displayFooterBefore'}
                 </div>
             </div>

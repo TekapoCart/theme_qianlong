@@ -84,6 +84,11 @@ msc-sidebar:not(:defined) {
     }
   }
 
+  .user-info a {
+    border: none;
+    padding: 0;
+  }
+
   .socialfollow {
     margin-top: 30px;
     margin-left: 50px;
@@ -106,7 +111,9 @@ msc-sidebar:not(:defined) {
     background: #dad7d0;
   }
 
-  #_mobile_user_info, #_mobile_language_selector, #_mobile_currency_selector {
+  #_mobile_user_info,
+  #_mobile_language_selector,
+  #_mobile_currency_selector {
     margin-left: 40px;
   }
 
