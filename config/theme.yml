@@ -1,7 +1,7 @@
 parent: simplicity
 name: theme_qianlong
 display_name: theme qianlong
-version: 1.0.0
+version: 1.0.1
 assets:
   use_parent_assets: true
   js:

@@ -23,22 +23,30 @@ $primary-letter-spacing: 0.6px;
 $article-letter-spacing: 0.91px;
 $extra-large-letter-spacing: 1.8px;
 
-/* text color */
+/* default variables */
 $primary-color: #000;
+
+/* link color */
+$primary-link-color: #000;
+$primary-link-hover: #0c2326;
+
+/* background color */
+$primary-background-color: #000;
+$primary-background-hover: #0c2326;
+$primary-background-disabled-hover: #7a7a7a;
+
+/* ---- */
+
 $highlight-color: #d72424;
 $listing-title-color: #fff;
 $listing-price-color: #b2b2b2;
 $index-title-color: #fff;
 $social-icon-color: #232323;
 
-/* link color */
-$primary-link-color: #000;
-$primary-link-hover: #0c2326;
 $primary-link-disabled-hover: #7a7a7a;
 $listing-link-color: #fff;
 $index-link-color: #fff;
 
-/* background color */
 $primary-background: #dad7d0;
 $listing-background: #565553;
 $overlay-background: rgba(0, 0, 0, .8);
